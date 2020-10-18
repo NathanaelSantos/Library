@@ -17,23 +17,22 @@ import static org.junit.Assert.*;
  * @author natha
  */
 public class ValidateCPFTest {
-
+    
     public ValidateCPFTest() {
-
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
@@ -49,5 +48,5 @@ public class ValidateCPFTest {
         boolean expResult = false;
         boolean result = instance.validate(userCPF);
         assertEquals(expResult, result);
-    }
+    }  
 }
