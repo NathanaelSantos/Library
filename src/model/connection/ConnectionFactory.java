@@ -5,21 +5,19 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import java.util.logging.Level;
 import message.Message;
-import message.MessageString;
-
 
 public final class ConnectionFactory extends Message {
-   
+
     public static Connection getConnection() {
 
         try {
 
-            Class.forName(MessageString.DRIVER.getDescription());
+            Class.forName("com.mysql.jdbc.Driver");
 
             return DriverManager.getConnection(
-                    MessageString.URL.getDescription(),
-                    MessageString.USER.getDescription(),
-                    MessageString.PASS.getDescription());
+                    "jdbc:mysql://localhost:3301/biblioteca",
+                    "root",
+                    "");
 
         } catch (ClassNotFoundException | SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro de conexão: não foi possível conectar ao banco de dados!");

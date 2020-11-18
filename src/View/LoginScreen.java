@@ -77,6 +77,7 @@ public final class LoginScreen extends javax.swing.JFrame {
         FrameDragList();
 
         // Button back
+        jLabelBackTelaEmprestimo.setVisible(false);
         jLabelBack3.setVisible(false);
         jLabelBackTelaAdmin.setVisible(false);
         jLabelBackTelaDeletaUsuario.setVisible(false);
@@ -287,7 +288,7 @@ public final class LoginScreen extends javax.swing.JFrame {
         jLabelBackjPanelTelaEstudante = new javax.swing.JLabel();
         jButtonAlteraçãoTelaAdmin1 = new javax.swing.JButton();
         jPanelTelaEmprestimo = new javax.swing.JPanel();
-        backTelaEmprestimo = new javax.swing.JLabel();
+        jLabelBackTelaEmprestimo = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         isbnLivro = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -820,19 +821,19 @@ public final class LoginScreen extends javax.swing.JFrame {
         jPanelTelaEmprestimo.setPreferredSize(new java.awt.Dimension(960, 615));
         jPanelTelaEmprestimo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backTelaEmprestimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/171489-200.png"))); // NOI18N
-        backTelaEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabelBackTelaEmprestimo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/171489-200.png"))); // NOI18N
+        jLabelBackTelaEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backTelaEmprestimoMouseClicked(evt);
+                jLabelBackTelaEmprestimoMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                backTelaEmprestimoMouseEntered(evt);
+                jLabelBackTelaEmprestimoMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                backTelaEmprestimoMouseExited(evt);
+                jLabelBackTelaEmprestimoMouseExited(evt);
             }
         });
-        jPanelTelaEmprestimo.add(backTelaEmprestimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 10, -1, -1));
+        jPanelTelaEmprestimo.add(jLabelBackTelaEmprestimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 10, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 254));
@@ -3041,6 +3042,9 @@ public final class LoginScreen extends javax.swing.JFrame {
 
     private void jPanelTelaEmprestimo(boolean ativa) {
 
+        jLabelBackTelaEmprestimo.setEnabled(ativa);
+        jLabelBackTelaEmprestimo.setVisible(ativa);
+        
         jPanelTelaEmprestimo.setVisible(ativa);
         jLabel15.setVisible(ativa);
         efetuarEmprestimo.setVisible(ativa);
@@ -3056,9 +3060,6 @@ public final class LoginScreen extends javax.swing.JFrame {
 
         jTableBookEmprestimo.setEnabled(ativa);
         jTableBookEmprestimo.setVisible(ativa);
-
-        backTelaEmprestimo.setEnabled(ativa);
-        backTelaEmprestimo.setVisible(ativa);
 
     }
 
@@ -3116,7 +3117,7 @@ public final class LoginScreen extends javax.swing.JFrame {
         jLabelBackVisiblejPanelTelaEstudante.setVisible(false);
     }//GEN-LAST:event_jLabelBackjPanelTelaEstudanteMouseExited
 
-    private void backTelaEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backTelaEmprestimoMouseClicked
+    private void jLabelBackTelaEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTelaEmprestimoMouseClicked
 
         if ("Professor".equals(new LoginScreen().getUser())) {
 
@@ -3129,15 +3130,15 @@ public final class LoginScreen extends javax.swing.JFrame {
             jPanelEstudante(true);
 
         }
-    }//GEN-LAST:event_backTelaEmprestimoMouseClicked
+    }//GEN-LAST:event_jLabelBackTelaEmprestimoMouseClicked
 
-    private void backTelaEmprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backTelaEmprestimoMouseEntered
+    private void jLabelBackTelaEmprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTelaEmprestimoMouseEntered
         jLabel18.setVisible(true);
-    }//GEN-LAST:event_backTelaEmprestimoMouseEntered
+    }//GEN-LAST:event_jLabelBackTelaEmprestimoMouseEntered
 
-    private void backTelaEmprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backTelaEmprestimoMouseExited
+    private void jLabelBackTelaEmprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackTelaEmprestimoMouseExited
         jLabel18.setVisible(false);
-    }//GEN-LAST:event_backTelaEmprestimoMouseExited
+    }//GEN-LAST:event_jLabelBackTelaEmprestimoMouseExited
 
     private void isbnLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isbnLivroActionPerformed
 
@@ -4847,7 +4848,6 @@ public final class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField anoLivro;
     private javax.swing.JLabel backTelaAdmin;
     private javax.swing.JLabel backTelaCadastraEstudante;
-    private javax.swing.JLabel backTelaEmprestimo;
     private javax.swing.JLabel backTelaProfessor;
     private javax.swing.JLabel backTelaRecuperaSenha;
     private javax.swing.JFormattedTextField birthDate;
@@ -4957,6 +4957,7 @@ public final class LoginScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelBackTelaDeletaUsuario;
     private javax.swing.JLabel jLabelBackTelaDeleteLivros;
     private javax.swing.JLabel jLabelBackTelaDevolucao;
+    private javax.swing.JLabel jLabelBackTelaEmprestimo;
     private javax.swing.JLabel jLabelBackTelaEstudante;
     private javax.swing.JLabel jLabelBackTelaProfessor;
     private javax.swing.JLabel jLabelBackVisiblejPanelTelaEstudante;

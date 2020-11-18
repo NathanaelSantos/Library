@@ -20,15 +20,7 @@ public enum MessageString {
     
     INSERT_TB_LIVRO("INSERT INTO tb_emprestimo_livro(Status, IdLivro, IdEmprestimo) VALUES (?,?,?)"),
     
-    INSERT_BOOK_TB_LIVRO("INSERT INTO tb_livro(Ano, PesoLivro, NomeAutorAutores, Titulo, NomeEditora, Idioma, Pais, ISBN, NumeroPagina, Quantidade) VALUES (?,?,?,?,?,?,?,?,?,?)"),
-    
-    URL("jdbc:mysql://127.0.0.1:3306/biblioteca"),
-    
-    DRIVER("com.mysql.jdbc.Driver"),
-    
-    USER("root"),
-    
-    PASS("");
+    INSERT_BOOK_TB_LIVRO("INSERT INTO tb_livro(Ano, PesoLivro, NomeAutorAutores, Titulo, NomeEditora, Idioma, Pais, ISBN, NumeroPagina, Quantidade) VALUES (?,?,?,?,?,?,?,?,?,?)");
 
     private final String description;
 

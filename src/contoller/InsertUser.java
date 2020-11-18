@@ -42,7 +42,7 @@ public class InsertUser implements InsertUserBD {
             pStment.setBoolean(2, true);
             pStment.executeUpdate();
 
-            pStment = connection.prepareStatement("INSERT INTO tb_Estudante(MatriculaEstudante, IdUsuario)VALUES(?,?)");
+            pStment = connection.prepareStatement("INSERT INTO tb_estudante(MatriculaEstudante, IdUsuario)VALUES(?,?)");
             pStment.setString(1, stdent.getMatriculaEstudante());
             pStment.setInt(2, idUsuario);
             pStment.executeUpdate();
@@ -54,6 +54,7 @@ public class InsertUser implements InsertUserBD {
         } finally {
             ConnectionFactory.closeConnection(connection, pStment, resultSet);
         }
+        
     }
 
     @Override
