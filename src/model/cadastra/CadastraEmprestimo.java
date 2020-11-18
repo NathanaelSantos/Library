@@ -1,7 +1,6 @@
 package model.cadastra;
 
 import View.LoginScreen;
-import static java.lang.System.exit;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import java.util.Calendar;
@@ -47,7 +46,7 @@ public class CadastraEmprestimo {
 
             if (estudante != null) {
                 if (new EqaulEmprestimo().equalEmprestimo(idLivro, idEstudante, "idEstudante")) {
-                    JOptionPane.showMessageDialog(null, "O estudante ja pegou emprestado este livro!");
+                    JOptionPane.showMessageDialog(null, "O estudante já pegou emprestado este livro!");
                 } else {
                     try {
 
@@ -81,7 +80,7 @@ public class CadastraEmprestimo {
                 }
             } else if (professor != null) {
                 if (new EqaulEmprestimo().equalEmprestimo(idLivro, idProfessor, "idProfessor")) {
-                    JOptionPane.showMessageDialog(null, "O professor ja pegou emprestado este livro!");
+                    JOptionPane.showMessageDialog(null, "O professor já pegou emprestado este livro!");
                 } else {
                     try {
 

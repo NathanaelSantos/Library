@@ -9,7 +9,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import model.GetUserEmprestimoBooks;
 import model.connection.ConnectionFactory;
 
 /**
@@ -24,10 +23,10 @@ public class EqaulEmprestimo {
         Connection connection = ConnectionFactory.getConnection();
         PreparedStatement pStment = null, pStment1 = null;
         ResultSet resultSet = null;
-        
+
         try {
 
-            pStment = connection.prepareStatement("SELECT L.IdLivro, U."+idNomeUser+" FROM tb_emprestimo_livro AS L JOIN tb_emprestimo AS U ON L.IdEmp_Livro = U.IdEmprestimo WHERE U."+idNomeUser+" = ?");
+            pStment = connection.prepareStatement("SELECT L.IdLivro, U." + idNomeUser + " FROM tb_emprestimo_livro AS L JOIN tb_emprestimo AS U ON L.IdEmp_Livro = U.IdEmprestimo WHERE U." + idNomeUser + " = ?");
             pStment.setInt(1, idUser);
 
             resultSet = pStment.executeQuery();
