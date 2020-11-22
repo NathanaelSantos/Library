@@ -2855,7 +2855,8 @@ public final class LoginScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMinimizejPanelLoginScreenMouseExited
 
     private void jLabelMinimizejPanelLoginScreenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinimizejPanelLoginScreenMouseClicked
-        setState(Frame.ICONIFIED);
+        minimizeTelaLogin.setVisible(false);
+        setState(Frame.ICONIFIED);     
     }//GEN-LAST:event_jLabelMinimizejPanelLoginScreenMouseClicked
 
     private void jButtonjPanelLoginScreenMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonjPanelLoginScreenMouseEntered
@@ -3494,6 +3495,7 @@ public final class LoginScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_backTelaRecuperaSenhaMouseExited
 
     private void jLabelMinimizeTelaFuncionarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinimizeTelaFuncionarioMouseClicked
+        minimizeTelaLoginFuncionario.setVisible(false);
         setState(Frame.ICONIFIED);
     }//GEN-LAST:event_jLabelMinimizeTelaFuncionarioMouseClicked
 
